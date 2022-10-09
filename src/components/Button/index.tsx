@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {ButtonStyled} from "./styles";
 
-const Button = () => {
+interface ButtonProps {
+    width?: string;
+    height?: string;
+    children?: React.ReactNode;
+    bgColor?: string;
+    textColor: string;
+}
+const MyButton = ({ width, height, children, bgColor, textColor }:ButtonProps): ReactElement => {
     return (
-        <div>
-            <ButtonStyled>Click!</ButtonStyled>
-        </div>
+        <>
+            <ButtonStyled width={width} height={height} bgColor={bgColor} textColor={textColor}>{children}</ButtonStyled>
+        </>
     );
 };
 
-export default Button;
+export default MyButton;

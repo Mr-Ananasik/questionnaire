@@ -1,10 +1,11 @@
 import React from 'react';
-import Button from './components/Button'
+import MyButton from './components/Button'
 
 const App = () => {
+  console.log('123');
   return (
           <div>
-              <Button/>
+              <MyButton width={"150px"} textColor={'white'} bgColor={'green'}>Click!</MyButton>
           </div>
   );
 };
